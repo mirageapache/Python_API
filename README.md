@@ -1,6 +1,28 @@
 # FastAPI
 
-使用 FastAPI 框架建立的 API 伺服器side project。
+使用 FastAPI 框架建立的 API 伺服器 side project。
+
+## 環境需求
+
+- Python 3.11
+- 虛擬環境 (venv)
+
+## 設定虛擬環境
+
+1. 建立虛擬環境：
+```bash
+py -3.11 -m venv venv
+```
+
+2. 啟動虛擬環境：
+```bash
+.\venv\Scripts\activate
+```
+
+3. 退出虛擬環境：
+```bash
+deactivate
+```
 
 ## 安裝依賴
 
