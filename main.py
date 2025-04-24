@@ -1,12 +1,17 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from app.core.config import settings
+from app.api.api import api_router
 
 # 創建 FastAPI 應用實例
 app = FastAPI(
-    title="FastAPI 應用",
+    title=settings.PROJECT_NAME,
     description="這是一個簡單的 API 示例",
-    version="1.0.0"
+    version=settings.VERSION
 )
+
+# 包含 API 路由
+app.include_router(api_router, prefix=settings.API_V1_STR)
 
 # 定義一個簡單的數據模型
 class Item(BaseModel):
